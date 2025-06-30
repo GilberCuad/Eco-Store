@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  font-family: "DM Sans", sans-serif;
 }
 
 .main_container {
@@ -21,9 +22,10 @@ header {
   align-items: center;
 }
 
-.header_title {
+.header_title h2 {
   padding-left: 40px;
   font-size: 30px;
+  font-weight: 400;
 }
 
 .header_logos {
@@ -34,4 +36,28 @@ header {
   height: 38px;
   width: 38px;
   padding-left: 15px;
+}
+
+.first_section {
+  display: flex;
+  padding: 40px;
+}
+
+.first_section_title {
+  padding-right: 130px;
+}
+
+.first_section_title h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.first_section_title p {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.first_section_img {
+  height: 686px;
+  width: 550px;
 }/*# sourceMappingURL=index.css.map */
