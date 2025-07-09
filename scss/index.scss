@@ -2,7 +2,7 @@ $primary-color: #ffefe7;
 $secondary-color: #ffdac6;
 $tertiary-color: #babd8d;
 $primary-text-color: #7c6a0a;
-$font-stack: "DM Sans", sans-serif;
+$font-stack: "Libertinus Math", system-ui;
 $size_md: 500;
 $size_m: 400;
 $size_mg: 700;
@@ -62,7 +62,8 @@ main {
   h2 {
     font-weight: 400;
     font-size: 50px;
-    padding-left: 40px;
+    padding-left: 80px;
+    margin: 0;
   }
 
   .first_section {
@@ -73,6 +74,7 @@ main {
 
   .first_section_title {
     padding-right: 130px;
+    line-height: 40px;
   }
 
   .first_section_title h1 {
@@ -115,24 +117,85 @@ main {
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
   }
-  .target-second_section p:nth-child(2) {
-    font-size: 25px;
-    font-weight: 600;
-    padding: 0;
-    margin: 0;
-  }
 
   .target-second_section {
     background-color: $secondary-color;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 314px;
     height: 492px;
     margin-top: 100px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .icon_heard {
+    background: url(/assets/svg/heart_icon.svg) center/cover no-repeat;
+    height: 19px;
+    width: 23px;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+
+  .description_text {
+    margin: 2px 40px 2px 40px;
+  }
+
+  .description_text p:nth-child(1) {
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 10px;
+    margin: 0;
+  }
+
+  .description_text p:nth-child(2) {
+    padding: 0;
+    margin: 0;
+    line-height: 18px;
+    padding-top: 10px;
+  }
+
+  .home_section {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  .home_section-container {
+    @extend .health_section-container;
+  }
+
+  .target-home_section {
+    @extend .target-second_section;
+    background-color: $tertiary-color;
+  }
+
+  .icon_heard_white {
+    @extend .icon_heard;
+    background: url(/assets/svg/heart_white.svg) center/cover no-repeat;
+  }
+
+  .description_text_home {
+    @extend .description_text;
+  }
+
+  .description_text_home p:nth-child(1) {
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 10px;
+    margin: 0;
+    color: $primary-color;
+  }
+
+  .description_text_home p:nth-child(2) {
+    padding: 0;
+    margin: 0;
+    line-height: 18px;
+    padding-top: 10px;
+    color: $primary-color;
   }
 }
 
