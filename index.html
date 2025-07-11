@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+x<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -8,6 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Math&family=Libertinus+Mono&display=swap"
+      rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Math&family=Libertinus+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Math&family=Libertinus+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet">
     <title>Eco Store</title>
   </head>
@@ -195,13 +207,13 @@
         <section class="about-us-section">
           <h2>¿Por qué nosotros?</h2>
           <div class="about-us-section_container">
-            <div class="about-us-section_earth">
-              <img src="/assets/logos/earth-logo 1.svg">
+            <div class="about-us-section_earth flex-direction">
+              <img src="./assets/svg/earth-logo 1.svg">
               <p>Compromiso con el medio ambiente garantizando
                 el uso de materiales 100% reciclables.</p>
             </div>
-            <div class="about-us-section_light">
-              <img src="/assets/logos/luz.svg">
+            <div class="about-us-section_light flex-direction">
+              <img src="./assets/svg/luz.svg">
               <p>Innovando con estilo
                 el diseño de nuestros
                 muebles es único.</p>
@@ -211,7 +223,7 @@
 
         <section class="galery_section">
           <h2>Galería de estilos </h2>
-          <div>
+          <div class="carrusel_img">
             <img src="/assets/img/galery/galery1.png">
             <img src="/assets/img/galery/galery2.png">
             <img src="/assets/img/galery/galery3.png">
@@ -220,17 +232,27 @@
 
         <section class="maps_section">
           <h2>Encuentranos aquí</h2>
-          <img src="/assets/img/galery/maps.png">
+          <figure class="maps"></figure>
+          <article class="maps_section-address">
+            <p>Centro Mayor Centro Comercial</p>
+            <p>Cl. 38A Sur #34d-51, Bogotá, Colombia</p>
+          </article>
+
         </section>
       </main>
 
       <footer>
-        <p>carrer</p>
-        <p>carrer</p>
         <div>
-          <svg> </svg>
-          <svg> </svg>
-          <svg> </svg>
+          <h2>Eco-store</h2>
+          <p>carrer</p>
+          <p>carrer</p>
+          <p>carrer</p>
+        </div>
+
+        <div class="social_media">
+          <img src="/assets/svg/facebook-logo.svg">
+          <img src="/assets/svg/instagram.svg">
+          <img src="/assets/svg/twitter-logo.svg">
         </div>
       </footer>
     </div>

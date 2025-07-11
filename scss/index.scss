@@ -7,8 +7,21 @@ $size_md: 500;
 $size_m: 400;
 $size_mg: 700;
 
+@mixin flexCenter($direction, $content: null, $align: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $align;
+}
+
+@mixin gridCenter($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  place-items: center;
+}
+
 body {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   min-height: 100vh;
   background: radial-gradient(
@@ -39,6 +52,7 @@ nav {
     padding-left: 40px;
     font-size: 30px;
     font-weight: 400;
+    font-size: 40px;
   }
 
   .header_logos {
@@ -60,10 +74,14 @@ nav {
 
 main {
   h2 {
-    font-weight: 400;
     font-size: 50px;
+    width: 526px;
     padding-left: 80px;
     margin: 0;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: $size_md;
+    margin-top: 100px;
+    box-shadow: 0px 9px 5px -4px rgba(255, 255, 255, 0.2);
   }
 
   .first_section {
@@ -106,6 +124,9 @@ main {
     color: $primary-color;
     font-size: 23px;
     font-weight: $size_mg;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .health_section {
@@ -113,9 +134,7 @@ main {
   }
 
   .health_section-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
+    @include gridCenter(3);
   }
 
   .target-second_section {
@@ -125,11 +144,9 @@ main {
     height: 492px;
     margin-top: 100px;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter(column, center, center);
     position: relative;
+    font-family: "IBM Plex Sans", sans-serif;
   }
 
   .icon_heard {
@@ -139,6 +156,12 @@ main {
     position: absolute;
     top: 30px;
     right: 20px;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition-duration: 0.3s;
+    }
   }
 
   .description_text {
@@ -155,8 +178,8 @@ main {
   .description_text p:nth-child(2) {
     padding: 0;
     margin: 0;
+    font-weight: $size_m;
     line-height: 18px;
-    padding-top: 10px;
   }
 
   .home_section {
@@ -197,8 +220,109 @@ main {
     padding-top: 10px;
     color: $primary-color;
   }
+
+  .about-us-section_container {
+    padding-top: 100px;
+    @include gridCenter(2);
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .flex-direction {
+    @include flexCenter(row, center, center);
+  }
+
+  .about-us-section_earth > img {
+    width: 140px;
+    padding-right: 50px;
+  }
+
+  .about-us-section_light > img {
+    width: 94px;
+    padding-right: 50px;
+  }
+
+  .flex-direction > p {
+    font-size: 30px;
+    width: 362px;
+    color: #fa9500;
+    text-align: center;
+  }
+
+  .galery_section {
+    .carrusel_img {
+      @include flexCenter(row, space-evenly, center);
+      img {
+        width: 28vw;
+        height: 45vh;
+        object-fit: cover;
+        border-radius: 16px;
+        object-position: 5px 35%;
+        &:hover {
+          transform: scale(1.1);
+          transition-duration: 0.3s;
+        }
+      }
+      margin-top: 100px;
+    }
+  }
+
+  .maps_section figure {
+    width: 90%;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+
+  .maps_section-address {
+    margin: 50px 0px 50px 80px;
+  }
+
+  .maps_section-address > p {
+    color: #fa9500;
+    margin: 0;
+  }
+  .maps_section-address p:nth-child(1) {
+    font-weight: $size_md;
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  .maps_section-address p:nth-child(2) {
+    font-weight: $size_m;
+    font-size: 25px;
+  }
+
+  .maps_section h2 {
+    margin-bottom: 100px;
+  }
+
+  .maps {
+    background: url(/assets/img/galery/maps.png) center/cover no-repeat;
+    width: 1300px;
+    height: 596px;
+  }
 }
 
 footer {
+  margin: 100px 0px 0px 0px;
+  padding-left: 40px;
   background-color: #fa9500;
+  color: $primary-color;
+
+  img {
+    height: 37px;
+    width: 37px;
+    margin-right: 20px;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition-duration: 0.3s;
+    }
+  }
+
+  .social_media {
+    @include flexCenter(row, center, center);
+    margin-bottom: 30px;
+  }
 }

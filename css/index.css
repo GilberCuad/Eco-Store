@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   min-height: 100vh;
   background: radial-gradient(circle at 50% 80%, rgba(168, 85, 247, 0.3) 0%, transparent 70%), #000000;
@@ -25,6 +25,7 @@ nav h2 {
   padding-left: 40px;
   font-size: 30px;
   font-weight: 400;
+  font-size: 40px;
 }
 nav .header_logos {
   padding-right: 70px;
@@ -41,10 +42,14 @@ nav .icon-head img {
 }
 
 main h2 {
-  font-weight: 400;
   font-size: 50px;
+  width: 526px;
   padding-left: 80px;
   margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  margin-top: 100px;
+  box-shadow: 0px 9px 5px -4px rgba(255, 255, 255, 0.2);
 }
 main .first_section {
   display: flex;
@@ -82,6 +87,9 @@ main .first_section_title button {
   font-size: 23px;
   font-weight: 700;
 }
+main .first_section_title button:hover {
+  transform: scale(1.1);
+}
 main .health_section {
   width: 100%;
 }
@@ -99,9 +107,10 @@ main .target-second_section, main .target-home_section {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 main .icon_heard, main .icon_heard_white {
   background: url(/assets/svg/heart_icon.svg) center/cover no-repeat;
@@ -110,6 +119,11 @@ main .icon_heard, main .icon_heard_white {
   position: absolute;
   top: 30px;
   right: 20px;
+}
+main .icon_heard:hover, main .icon_heard_white:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: 0.3s;
 }
 main .description_text, main .description_text_home {
   margin: 2px 40px 2px 40px;
@@ -123,8 +137,8 @@ main .description_text p:nth-child(1), main .description_text_home p:nth-child(1
 main .description_text p:nth-child(2), main .description_text_home p:nth-child(2) {
   padding: 0;
   margin: 0;
+  font-weight: 400;
   line-height: 18px;
-  padding-top: 10px;
 }
 main .home_section {
   width: 100%;
@@ -150,7 +164,104 @@ main .description_text_home p:nth-child(2) {
   padding-top: 10px;
   color: #ffefe7;
 }
+main .about-us-section_container {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+main .flex-direction {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main .about-us-section_earth > img {
+  width: 140px;
+  padding-right: 50px;
+}
+main .about-us-section_light > img {
+  width: 94px;
+  padding-right: 50px;
+}
+main .flex-direction > p {
+  font-size: 30px;
+  width: 362px;
+  color: #fa9500;
+  text-align: center;
+}
+main .galery_section .carrusel_img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 100px;
+}
+main .galery_section .carrusel_img img {
+  width: 28vw;
+  height: 45vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+  -o-object-position: 5px 35%;
+     object-position: 5px 35%;
+}
+main .galery_section .carrusel_img img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+main .maps_section figure {
+  width: 90%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+main .maps_section-address {
+  margin: 50px 0px 50px 80px;
+}
+main .maps_section-address > p {
+  color: #fa9500;
+  margin: 0;
+}
+main .maps_section-address p:nth-child(1) {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+}
+main .maps_section-address p:nth-child(2) {
+  font-weight: 400;
+  font-size: 25px;
+}
+main .maps_section h2 {
+  margin-bottom: 100px;
+}
+main .maps {
+  background: url(/assets/img/galery/maps.png) center/cover no-repeat;
+  width: 1300px;
+  height: 596px;
+}
 
 footer {
+  margin: 100px 0px 0px 0px;
+  padding-left: 40px;
   background-color: #fa9500;
+  color: #ffefe7;
+}
+footer img {
+  height: 37px;
+  width: 37px;
+  margin-right: 20px;
+}
+footer img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+footer .social_media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=index.css.map */
