@@ -80,12 +80,16 @@ nav {
 
     .burger-options {
       display: block;
+      margin-right: 20px;
+      width: 70px;
+      height: 50px;
+      background-color: transparent;
     }
 
     .burger-options button img {
-      text-decoration: none;
       width: 50px;
       height: 50px;
+      border: none;
     }
   }
 }
@@ -204,10 +208,12 @@ main {
   .home_section {
     width: 100%;
     margin-top: 100px;
+    @include flexCenter(column, center, center);
   }
 
   .home_section-container {
     @extend .health_section-container;
+    width: 100%;
   }
 
   .target-home_section {
@@ -240,6 +246,10 @@ main {
     color: $primary-color;
   }
 
+  .about-us-section {
+    @include flexCenter(column, center, center);
+  }
+
   .about-us-section_container {
     padding-top: 100px;
     @include gridCenter(2);
@@ -269,6 +279,7 @@ main {
   }
 
   .galery_section {
+    @include flexCenter(column, center, center);
     .carrusel_img {
       @include flexCenter(row, space-evenly, center);
       img {
@@ -284,6 +295,10 @@ main {
       }
       margin-top: 100px;
     }
+  }
+
+  .maps_section {
+    @include flexCenter(column, center, center);
   }
 
   .maps_section figure {
@@ -344,7 +359,7 @@ main {
 
     .health_section-container {
       @include gridCenter(2);
-      gap: 30px;
+      width: 100%;
     }
 
     .about-us-section_container {
@@ -356,9 +371,12 @@ main {
     }
 
     .galery_section .carrusel_img img {
-      width: 120vw;
-      height: 60vh;
+      width: 143vw;
+      height: 68vh;
       padding-bottom: 30px;
+    }
+
+    h2 {
     }
   }
 }
