@@ -21,7 +21,7 @@ $size_mg: 700;
 }
 
 body {
-  margin: 10px;
+  margin: 5px;
   padding: 0;
   min-height: 100vh;
   background: radial-gradient(
@@ -44,9 +44,11 @@ body {
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexCenter(row, space-between, center);
+
+  .burger-options {
+    display: none;
+  }
 
   h2 {
     padding-left: 40px;
@@ -70,6 +72,22 @@ nav {
     height: 38px;
     width: 38px;
   }
+
+  @media (max-width: 500px) {
+    .header_logos {
+      display: none;
+    }
+
+    .burger-options {
+      display: block;
+    }
+
+    .burger-options button img {
+      text-decoration: none;
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
 
 main {
@@ -88,6 +106,7 @@ main {
     display: flex;
     padding: 40px;
     margin-bottom: 100px;
+    margin: 0;
   }
 
   .first_section_title {
@@ -300,6 +319,47 @@ main {
     background: url(/assets/img/galery/maps.png) center/cover no-repeat;
     width: 1300px;
     height: 596px;
+  }
+
+  @media (max-width: 500px) {
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .first_section {
+      @include flexCenter(column-reverse, center, center);
+    }
+
+    .health_section {
+      @include flexCenter(column, center, center);
+      min-height: 100vh;
+      width: 120vh;
+    }
+
+    .first_section_title {
+      padding: 0;
+      text-align: center;
+    }
+
+    .health_section-container {
+      @include gridCenter(2);
+      gap: 30px;
+    }
+
+    .about-us-section_container {
+      @include gridCenter(1);
+    }
+
+    .galery_section .carrusel_img {
+      @include flexCenter(column, center, center);
+    }
+
+    .galery_section .carrusel_img img {
+      width: 120vw;
+      height: 60vh;
+      padding-bottom: 30px;
+    }
   }
 }
 
