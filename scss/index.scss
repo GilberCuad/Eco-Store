@@ -169,7 +169,7 @@ main {
   }
 
   .icon_heard {
-    background: url(/assets/svg/heart_icon.svg) center/cover no-repeat;
+    background: url(.assets/svg/heart_icon.svg) center/cover no-repeat;
     height: 19px;
     width: 23px;
     position: absolute;
@@ -217,7 +217,7 @@ main {
 
   .icon_heard_white {
     @extend .icon_heard;
-    background: url(/assets/svg/heart_white.svg) center/cover no-repeat;
+    background: url(.assets/svg/heart_white.svg) center/cover no-repeat;
   }
 
   .description_text_home {
@@ -316,7 +316,7 @@ main {
   }
 
   .maps {
-    background: url("/assets/img/galery/maps.png") center/cover no-repeat;
+    background: url(.assets/img/galery/maps.png) center/cover no-repeat;
     width: 1300px;
     height: 596px;
   }
