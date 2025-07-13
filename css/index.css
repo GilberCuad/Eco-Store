@@ -313,9 +313,17 @@ main .maps {
   }
   main .health_section-container, main .home_section-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     place-items: center;
     width: 100%;
+  }
+  main .target-second_section, main .target-home_section {
+    width: 400px;
+    height: 500px;
+  }
+  main .target-second_section > img, main .target-home_section > img {
+    height: 330px;
+    width: 315px;
   }
   main .about-us-section_container {
     display: grid;
@@ -332,6 +340,9 @@ main .maps {
     width: 143vw;
     height: 68vh;
     padding-bottom: 30px;
+  }
+  main .galery_section .carrusel_img img {
+    border-radius: 90px;
   }
 }
 

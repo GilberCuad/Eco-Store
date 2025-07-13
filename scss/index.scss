@@ -358,8 +358,18 @@ main {
     }
 
     .health_section-container {
-      @include gridCenter(2);
+      @include gridCenter(1);
       width: 100%;
+    }
+
+    .target-second_section {
+      width: 400px;
+      height: 500px;
+    }
+
+    .target-second_section > img {
+      height: 330px;
+      width: 315px;
     }
 
     .about-us-section_container {
@@ -376,7 +386,8 @@ main {
       padding-bottom: 30px;
     }
 
-    h2 {
+    .galery_section .carrusel_img img {
+      border-radius: 90px;
     }
   }
 }
